@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Zayıflığın tadı hiçbir yemekte yoktur</title>
+  <title>Zayıflığın tadı hiçbir yemekte yok</title>
   <style>
     * {
       margin: 0;
@@ -12,54 +12,35 @@
 
     body {
       height: 100vh;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #ffe0e6, #1a1a1a);
+      color: #ffffff;
+    }
+
+    .slogan {
       text-align: center;
-
-      /* ARKA PLAN PNG */
-      background-image: url("003bg.png"); /* burayı kendi dosya adına göre değiştir */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.2;
+      max-width: 900px;
+      padding: 1rem 2rem;
+      border-radius: 24px;
+      backdrop-filter: blur(16px);
+      background: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
     }
 
-    .overlay {
-      padding: 1.5rem 2rem;
-      border-radius: 20px;
-      background: rgba(0, 0, 0, 0.45);
-      color: #fff;
-      max-width: 800px;
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.3;
-    }
-
-    /* Sol üstte küçük ev butonu */
-    .home-btn {
-      position: fixed;
-      top: 16px;
-      left: 16px;
-      text-decoration: none;
-      font-size: 1.8rem;
-      background: rgba(0,0,0,0.5);
-      color: #fff;
-      padding: 4px 8px;
-      border-radius: 999px;
-    }
-
-    .home-btn:hover {
-      background: rgba(0,0,0,0.75);
+    .highlight {
+      color: #ff6b81;
     }
   </style>
 </head>
 <body>
-  <!-- Sol üstte ev ikonu, index.html'e götürüyor -->
-  <a href="index.html" class="home-btn">🏠</a>
-
-  <!-- Ortadaki yazıyı buraya yaz -->
-  <div class="overlay">
-    <span class="highlight">ZAYIFLIĞIN TADI</span> HİÇBİR YEMEKTE YOKTUR!
+  <div class="slogan">
+    <span class="highlight">Zayıflığın tadı</span> hiçbir yemekte yok
   </div>
 </body>
 </html>
