@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>Zayıflığın tadı hiçbir yemekte yok</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid Liste</title>
   <style>
     * {
       margin: 0;
@@ -11,36 +12,108 @@
     }
 
     body {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #ffe0e6, #1a1a1a);
-      color: #ffffff;
+      background: #0f0f10;
+      color: #fff;
+      min-height: 100vh;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
     }
 
-    .slogan {
+    h1 {
       text-align: center;
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 800;
-      line-height: 1.2;
-      max-width: 900px;
-      padding: 1rem 2rem;
-      border-radius: 24px;
-      backdrop-filter: blur(16px);
-      background: rgba(0, 0, 0, 0.5);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      font-size: 1.8rem;
+      letter-spacing: 0.04em;
     }
 
-    .highlight {
-      color: #ff6b81;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      height: 180px;
+      text-decoration: none;
+      color: #fff;
+      display: flex;
+      align-items: stretch;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.65));
+    }
+
+    .card-content {
+      position: relative;
+      z-index: 1;
+      padding: 16px;
+      display: flex;
+      align-items: flex-end;
+      width: 100%;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.8);
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 16px; }
+      .card { height: 160px; }
     }
   </style>
 </head>
 <body>
-  <div class="slogan">
-    <span class="highlight">ZAYIFLIĞIN TADI</span> HİÇBİR YEMEKTE YOKTUR!
+  <h1>Sloganlar</h1>
+
+  <div class="grid">
+    <!-- 1. Kart -->
+    <a href="baslamak.html"
+       class="card"
+       style="background-image: url('001bg.png');">
+      <div class="card-content">
+        <span class="card-title">Başlamak Başarmanın Yarısıdır</span>
+      </div>
+    </a>
+
+    <!-- 2. Kart -->
+    <a href="zayifligintadi.html"
+       class="card"
+       style="background-image: url('002bg.png');">
+      <div class="card-content">
+        <span class="card-title">Zayıflığın tadı hiçbir yemekte yoktur</span>
+      </div>
+    </a>
+
+    <!-- 3. Kart -->
+    <a href="sayfa3.html"
+       class="card"
+       style="background-image: url('003bg.png');">
+      <div class="card-content">
+        <span class="card-title">Sayfa 3 Başlık</span>
+      </div>
+    </a>
+
+    <!-- İstersen daha fazla kart ekle -->
   </div>
 </body>
 </html>
