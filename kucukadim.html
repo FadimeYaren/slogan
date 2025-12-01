@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ortada Yazı - Arka Plan PNG</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;   /* yatayda ortala */
+      align-items: center;       /* dikeyde ortala */
+      text-align: center;
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+
+      /* ARKA PLAN PNG (aynı klasördeki dosya adını yaz) */
+      background-image: url("004bg.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .center-text {
+      padding: 20px 30px;
+      background: rgba(0, 0, 0, 0.4); /* yazıyı okunur yapmak için hafif koyu arka plan */
+      border-radius: 10px;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="center-text">
+    Bugün sadece küçük bir adım atacağım
+  </div>
+</body>
+</html>
